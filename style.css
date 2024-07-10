@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #000;
+  text-align: center;
+}
+
+.container {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px 25px;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.container .text {
+  color: #eee;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 35px;
+}
+
+.input-data .display {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-data .display input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.input-data .display span {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: #ccc;
+  display: block;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.input-data .display span:hover {
+  opacity: 1;
+}
+
+.input-data button {
+  display: block;
+  height: 45px;
+  width: 100%;
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.input-data button:hover {
+  background: linear-gradient(135deg, #45a049, #4CAF50);
+}
+
+.input-data button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  animation: sparkle 1s infinite linear;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.input-data button:hover::before {
+  opacity: 1;
+}
+
+@keyframes sparkle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
